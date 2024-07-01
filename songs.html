@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Audio Player</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background: url('IMG_8174.JPG') no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #333;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .player-container {
+        width: 400px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px); /* Размазване */
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    #audio-player {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .control-button {
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+        flex: 1 0 45%; /* Подрежда бутоните в две колони */
+        box-sizing: border-box;
+    }
+    .control-button:hover {
+        background-color: #0056b3;
+    }
+    .text-content {
+        max-width: 600px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .text-content p {
+        margin: 10px 0;
+    }
+    .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        text-decoration: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1000; /* Число над другите елементи */
+        transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+</style>
+</head>
+<body>
+<a href="godishnina.html" class="back-button">&#10094;</a>
+
+<div class="text-content">
+    <p>БЕБЧЕНЦЕЕЕЕ</p>
+    <p>Наред с всичките ни приключения, музиката винаги е била част от тях. Точно, заради това реших да извадя част от песните, които останаха в моето съзнание и ме карат, винаги като ги чуя да се сещам за прекрасните ни моменти.</p>
+    <p>Много искам да разбера, как би го довършила, за да можем да завършим прекрасния ни плейър "Songs to be remembered"</p>
+</div>
+
+<div class="player-container">
+    <div class="title">Songs to be remembered</div>
+    <audio id="audio-player" controls>
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div id="controls">
+        <button class="control-button" onclick="playAudio('song1.mp3')">Песен 1</button>
+        <button class="control-button" onclick="playAudio('song2.mp3')">Песен 2</button>
+        <button class="control-button" onclick="playAudio('song3.mp3')">Песен 3</button>
+        <button class="control-button" onclick="playAudio('song4.mp3')">Песен 4</button>
+        <button class="control-button" onclick="playAudio('song5.mp3')">Песен 5</button>
+        <button class="control-button" onclick="playAudio('song6.mp3')">Песен 6</button>
+        <button class="control-button" onclick="playAudio('song7.mp3')">Песен 7</button>
+        <button class="control-button" onclick="playAudio('song8.mp3')">Песен 8</button>
+        <button class="control-button" onclick="playAudio('song9.mp3')">Песен 9</button>
+        <button class="control-button" onclick="playAudio('song10.mp3')">Песен 10</button>
+        <button class="control-button" onclick="playAudio('song11.mp3')">Песен 11</button>
+        <button class="control-button" onclick="playAudio('song12.mp3')">Песен 12</button>
+        <button class="control-button" onclick="playAudio('song13.mp3')">Песен 13</button>
+        <button class="control-button" onclick="playAudio('song14.mp3')">Песен 14</button>
+        <button class="control-button" onclick="playAudio('song15.mp3')">Песен 15</button>
+        <button class="control-button" onclick="playAudio('song16.mp3')">Песен 16</button>
+        <button class="control-button" onclick="playAudio('song17.mp3')">Песен 17</button>
+        <button class="control-button" onclick="playAudio('song18.mp3')">Песен 18</button>
+    </div>
+</div>
+
+<script>
+var audioPlayer = document.getElementById('audio-player');
+
+function playAudio(filename) {
+    audioPlayer.src = filename;
+    audioPlayer.play();
+}
+</script>
+
+</body>
+</html>
