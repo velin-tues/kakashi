@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 reasons why I love you</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: url('14.06.2021-9587.jpg') no-repeat center center fixed; /* Сложи своя URL тук */
+            background-size: cover;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            font-size: 30px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            position: relative; /* Задаваме relative позиция, за да позиционираме абсолютно */
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center; /* Центрираме текста на заглавието */
+            font-size: 40px; /* Увеличаваме размера на шрифта на заглавието */
+        }
+        .reason {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin: 10px 0;
+        }
+        .reason.show {
+            display: block;
+        }
+        .reason.fade-in {
+            opacity: 1;
+        }
+        #show-reason-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-top: auto;
+            filter: blur(1px);
+            transition: filter 0.3s ease;
+        }
+        #show-reason-button:hover {
+            filter: blur(0);
+        }
+
+        /* Стилове за бутона за връщане */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <a href="godishnina.html" class="back-button">Back to Home</a>
+
+    <h1>10 reasons why I love you</h1>
+    <div id="reasons-container">
+        <p class="reason">1. Твоята лъчезарност, красота и най-вече усмивка!</p>
+        <p class="reason">2. Страхотното и безпардонно чувство за хумор, което ме кара винаги да се чувствам уникално.</p>
+        <p class="reason">3. Това, че си тук независимо какво е, кога е и защо е, ти просто си тук.</p>
+        <p class="reason">4. Твоята абсолютна дебилщина, което е просто най-сладкото нещо на света.... Не знам кой друг пърди в муцуната на куцето си... </p>
+        <p class="reason">5. Това, че ме караш да се чувствам искан, ценен и обичан...</p>
+        <p class="reason">6. Огромната интелигентност, рязък ум и пиперлив език.</p>
+        <p class="reason">7. Затова, че ти си моят най-близък човек, приятел и най-вече ЛЮБОВ.</p>
+        <p class="reason">8. Затова, че ти наистина трябва да бъдеш за пример какъв трябва да бъде един човек - с добро сърце, вдъхновение и непоколебима решителност за доброта.</p>
+        <p class="reason">9. Това, че просто ме караш да искам нещата от живота С ТЕБЯ.</p>
+        <p class="reason">10. Затова, че ти си просто най-перфектното момиче на света...</p>
+    </div>
+    <button id="show-reason-button">Show Next Reason</button>
+
+    <script>
+        let currentReason = 0;
+        const reasons = document.querySelectorAll('.reason');
+        const button = document.getElementById('show-reason-button');
+
+        button.addEventListener('click', () => {
+            if (currentReason < reasons.length) {
+                const reason = reasons[currentReason];
+                reason.style.display = 'block';
+                setTimeout(() => {
+                    reason.classList.add('fade-in');
+                }, 10);
+                currentReason++;
+                if (currentReason === reasons.length) {
+                    button.disabled = true;
+                    button.textContent = 'БЛАГОДАРЯ ТИ, ЧЕ ТЕ ИМА';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
