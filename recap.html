@@ -10,26 +10,26 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to left, #FF5733, #FFC300); /* Градиентен фон */
+            background: linear-gradient(to left, #FF5733, #FFC300); 
             color: white;
             color: white;
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Позициониране отляво */
+            justify-content: flex-start; 
         }
 
         .text-container {
-            width: 40%; /* Половината ширина на страницата */
-            background: rgba(255, 255, 255, 0.8); /* Полупрозрачен бял фон за текста */
+            width: 40%; 
+            background: rgba(255, 255, 255, 0.8); 
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             color: black;
-            margin-left: 50px; /* Разстояние отляво до контейнера */
+            margin-left: 50px; 
         }
 
         .text-content {
-            text-align: justify; /* Двустранно подравняване */
+            text-align: justify; 
         }
 
         h1 {
@@ -37,25 +37,25 @@
             color: #333;
         }
 
-        /* Стилове за прозореца със снимките */
+    
         .slideshow-container {
-            width: 40%; /* Променено от 50% на 40% */
-            position: relative; /* Установяване на позиция */
-            overflow: hidden; /* Скриване на съдържанието, което излиза извън границите */
-            margin-top: 20px; /* Отстъпка от горната част на контейнера */
-            margin-left: 20px; /* Добавено разстояние между контейнерите */
-            float: right; /* Задаваме float: right, за да преместим прозореца вдясно */
+            width: 40%; 
+            position: relative; 
+            overflow: hidden; 
+            margin-top: 20px; 
+            margin-left: 20px; 
+            float: right; 
         }
 
         .mySlides {
-            display: none; /* Скриване на снимките по подразбиране */
-            animation-name: fadeInOut; /* Задаваме името на анимацията */
-            animation-duration: 2s; /* Дължина на анимацията */
+            display: none; 
+            animation-name: fadeInOut; 
+            animation-duration: 2s; 
         }
 
         img {
-            width: 100%; /* 100% ширина */
-            height: auto; /* Автоматична височина */
+            width: 100%; 
+            height: auto; 
         }
 
         @keyframes fadeInOut {
@@ -67,9 +67,6 @@
     </style>
 </head>
 <body>
-    <!-- Бутон за превключване назад -->
-<!-- Бутон за превключване назад -->
-<!-- Бутон за превключване назад -->
 <a href="godishnina.html" class="prev" style="position: fixed; top: 30px; left: 30px; background-color: rgba(0, 0, 0, 0.5); color: white; border: none; border-radius: 50%; padding: 10px; font-size: 24px; text-decoration: none; cursor: pointer;">&#10094;</a>
 
 
@@ -81,9 +78,9 @@
             <p>Наистина ми е трудно да подбера, кои снимки трябва да избера. Добре че, програмистките ми умения не позволяват вертикални снимки, защото се чупят и нищо не се визуализира. Всяка една снимка е подбрана по месец и така чаааак .07.2024. Обичам тееее до края на света и нека за 5тата година имаме още толкова прекрасни снимки, които вече с моите Upgrade-нати програмистки умения да мога да сложа :) :) :)</p>
         </div>
     </div>
-    <!-- Прозорец за снимките -->
+
     <div class="slideshow-container">
-        <!-- Снимки -->
+       
         <div class="mySlides fade">
             <img src="IMG_4443.JPG" alt="Снимка 1">
         </div>
@@ -120,13 +117,11 @@
         <div class="mySlides fade">
             <img src="recap12.JPG" alt="Снимка 12">
         </div>
-        <!-- Други снимки тук -->
     </div>
 
     <script>
         var slideIndex = 0;
         showSlides();
-
         function showSlides() {
             var i;
             var slides = document.getElementsByClassName("mySlides");
@@ -136,7 +131,7 @@
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}
             slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 2000); // Променете този параметър, за да промените интервала между снимките
+            setTimeout(showSlides, 2000); 
         }
     </script>
 </body>
