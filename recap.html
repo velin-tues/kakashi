@@ -1,139 +1,47 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Recap</title>
+    <title>4th year recap</title>
     <style>
-        body, html {
+        body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to left, #FF5733, #FFC300); 
-            color: white;
-            color: white;
+            height: 100vh;
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: flex-start; 
+            font-family: Arial, sans-serif;
+            background-image: url('snimka.JPG');
+            background-size: cover;
+            background-position: center;
         }
 
-        .text-container {
-            width: 40%; 
-            background: rgba(255, 255, 255, 0.8); 
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            color: black;
-            margin-left: 50px; 
+            text-align: justify;
         }
 
-        .text-content {
-            text-align: justify; 
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-    
-        .slideshow-container {
-            width: 40%; 
-            position: relative; 
-            overflow: hidden; 
-            margin-top: 20px; 
-            margin-left: 20px; 
-            float: right; 
-        }
-
-        .mySlides {
-            display: none; 
-            animation-name: fadeInOut; 
-            animation-duration: 2s; 
-        }
-
-        img {
-            width: 100%; 
-            height: auto; 
-        }
-
-        @keyframes fadeInOut {
-            0% {opacity: 0;}
-            20% {opacity: 1;}
-            80% {opacity: 1;}
-            100% {opacity: 0;}
+        .container img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-<a href="godishnina.html" class="prev" style="position: fixed; top: 30px; left: 30px; background-color: rgba(0, 0, 0, 0.5); color: white; border: none; border-radius: 50%; padding: 10px; font-size: 24px; text-decoration: none; cursor: pointer;">&#10094;</a>
-
-
-    <div class="text-container">
-        <h1>Това, бебешорче малко е нашият Recap</h1>
-        <div class="text-content">
-            <p>Толкова прекрасни снимки, бибаааа....</p>
-            <p>Толкова много спомени с теб....</p>
-            <p>Наистина ми е трудно да подбера, кои снимки трябва да избера. Добре че, програмистките ми умения не позволяват вертикални снимки, защото се чупят и нищо не се визуализира. Всяка една снимка е подбрана по месец и така чаааак .07.2024. Обичам тееее до края на света и нека за 5тата година имаме още толкова прекрасни снимки, които вече с моите Upgrade-нати програмистки умения да мога да сложа :) :) :)</p>
-        </div>
+    <a href="godishnina.html" class="prev" style="position: fixed; top: 30px; left: 30px; background-color: rgba(0, 0, 0, 0.5); color: white; border: none; border-radius: 50%; padding: 10px; font-size: 24px; text-decoration: none; cursor: pointer;">&#10094;</a>
+    <div class="container">
+        <h1><strong>4th Year Recap</strong></h1>
+        <p>Какаааашииии, толковааа многоооо снимкииии, толковааа много прекрасни моменти. Наистина просто ги гледам и не мога да си сваля усмивката от лицето. Опитах се да направя някакъв колаж, в който да покажа по-основните неща от годината, но то човек, просто не може да се събере. ПОЖЕЛАВАМ НИ БЕБО, за напред да имаме още, още и още преживявания, които да превръщаме в спомени, и то такива...</p>
+        <p>Наистина са страшно много снимки, но в моето сърце това е снимката, която е просто моят фав. Конкуренцията е скандална, но просто биба.....</p>
+        <img src="4.png" alt="Снимка" />
     </div>
-
-    <div class="slideshow-container">
-       
-        <div class="mySlides fade">
-            <img src="IMG_4443.JPG" alt="Снимка 1">
-        </div>
-        <div class="mySlides fade">
-            <img src="recap2.JPG" alt="Снимка 2">
-        </div>
-        <div class="mySlides fade">
-            <img src="IMG_5494.JPG" alt="Снимка 3">
-        </div>
-        <div class="mySlides fade">
-            <img src="recap4.jpg" alt="Снимка 4">
-        </div>
-        <div class="mySlides fade">
-            <img src="IMG_0302.PNG" alt="Снимка 5">
-        </div>
-        <div class="mySlides fade">
-            <img src="recap6.JPG" alt="Снимка 6">
-        </div>
-        <div class="mySlides fade">
-            <img src="IMG_6846.PNG" alt="Снимка 7">
-        </div>
-        <div class="mySlides fade">
-            <img src="recap8.JPG" alt="Снимка 8">
-        </div>
-        <div class="mySlides fade">
-            <img src="recap9.JPG" alt="Снимка 9">
-        </div>
-        <div class="mySlides fade">
-            <img src="IMG_0303.PNG" alt="Снимка 10">
-        </div>
-        <div class="mySlides fade">
-            <img src="recap11.JPG" alt="Снимка 11">
-        </div>
-        <div class="mySlides fade">
-            <img src="recap12.JPG" alt="Снимка 12">
-        </div>
-    </div>
-
-    <script>
-        var slideIndex = 0;
-        showSlides();
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 2000); 
-        }
-    </script>
 </body>
 </html>
-
